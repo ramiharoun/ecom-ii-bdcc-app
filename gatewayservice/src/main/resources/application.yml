@@ -10,13 +10,12 @@ spring:
       enabled: false
 
     gateway:
-      mvc:
-        routes:
-          - id: customer-route
-            uri: http://localhost:8081
-            predicates:
-              - Path=/api/customers/**
-          - id: product-route
-            uri: http://localhost:8082
-            predicates:
-              - Path=/api/products/**
+      routes:
+        - id: customer-route
+          uri: http://localhost:8081
+          predicates:
+            - Path=/api/customers/**
+        - id: product-route
+          uri: http://localhost:8082
+          predicates:
+            - Path=/api/products/**
